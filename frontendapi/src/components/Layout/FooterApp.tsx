@@ -9,7 +9,6 @@ function FooterApp() {
               <p className="text-gray-400">Ofrecemos soluciones innovadoras para todos nuestros clientes con el más alto nivel de calidad.</p>
               <p className="mt-4 text-gray-400">Dirección: Avenida 2 Norte # 24 - N - 91, Cali-Colombia</p>
             </div>
-  
             {/* Enlaces de navegación */}
             <div>
               <h3 className="text-xl font-bold mb-4">Enlaces útiles</h3>
