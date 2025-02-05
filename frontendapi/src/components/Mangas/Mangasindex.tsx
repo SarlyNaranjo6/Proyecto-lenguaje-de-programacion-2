@@ -33,6 +33,7 @@ const handleDelete = async (id) => {
         console.log(`Eliminar actividad con ID: ${id}`);
         await deleteMangaRequest(id);
         setMangas(mangas.filter((manga) => manga._id !== id));
+        setUpdateList(true);
     } catch (error) {
         console.log(error);
     }
@@ -41,12 +42,14 @@ const handleDelete = async (id) => {
 
     return (
         <div>
-            <a href="/productos/nuevo" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-                Crear nuevo Manga
-            </a>
-            <h2 className="text-2xl font-bold mb-4">Lista de Actividades</h2>
+            <div className="mt-2 px-5 ">
+                <h2 className="text-2xl font-bold mb-4">Lista de Actividades</h2>
+                <a href="/productos/nuevo" className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-4 rounded-full">
+                    Crear nuevo Manga
+                </a>               
+            </div>
             {error && <p className="text-red-500">{error}</p>}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="mt-2 px-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-h-[75vh] overflow-y-auto">
                 {mangas.length > 0 ? (
                 mangas.map((manga) => (
                     <div
@@ -54,6 +57,7 @@ const handleDelete = async (id) => {
                     className="bg-gray-800 p-4 rounded-2xl shadow-lg relative"
                     >
                     <h3 className="text-xl font-semibold">{manga.title}</h3>
+                    <p className="text-gray-400">{manga.price}</p>
                     <p className="text-gray-400">{manga.description || "Sin descripción"}</p>
                     <div className="flex justify-end space-x-2 mt-4">
                         <button
