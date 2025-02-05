@@ -16,8 +16,8 @@ function App() {
 
         <Routes>
           <Route path="/inicio" element={<Bienvenida />} />
-          <Route path="/servicios" element={<Mangasindex />} />
-          <Route path="/proyectos" element={<MangaForm />} />
+          <Route path="/productos" element={<Mangasindex />} />
+          <Route path="/productos/nuevo" element={<MangaForm />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
 

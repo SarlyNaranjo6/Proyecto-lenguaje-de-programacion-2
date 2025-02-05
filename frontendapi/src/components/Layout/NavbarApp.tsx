@@ -4,8 +4,7 @@ import { NavLink } from "react-router-dom";
 const NavbarApp = () => {
   const [menuItems] = useState([
     { name: "Inicio", link: "/inicio" },
-    { name: "Servicios", link: "/servicios" },
-    { name: "Proyectos", link: "/proyectos" },
+    { name: "Productos", link: "/productos" },
     { name: "Contacto", link: "/contacto" },
   ]);
 

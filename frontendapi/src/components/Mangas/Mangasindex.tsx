@@ -16,9 +16,10 @@ function MangasIndex() {
                 const data = await response.json();
                 setMangas(data);
             } catch (e) {
-                setError("No se trajo los valores");
-                console.error(e)
+                setError('No se trajo los valores');
+                console.error(e);
             }
+            
         }
         fetchMangas();
     }, [updateList])
@@ -29,16 +30,20 @@ const handleEdit = (id) => {
 
 const handleDelete = async (id) => {
     try {
-        console.log (`Eliminar actividad con ID: ${id}`);
+        console.log(`Eliminar actividad con ID: ${id}`);
         await deleteMangaRequest(id);
-        setMangas(manga.filter((manga) => manga._id !== id));
+        setMangas(mangas.filter((manga) => manga._id !== id));
     } catch (error) {
         console.log(error);
     }
-}
+};
+
 
     return (
         <div>
+            <a href="/productos/nuevo" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+                Crear nuevo Manga
+            </a>
             <h2 className="text-2xl font-bold mb-4">Lista de Actividades</h2>
             {error && <p className="text-red-500">{error}</p>}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
