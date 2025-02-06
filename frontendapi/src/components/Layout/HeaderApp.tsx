@@ -12,7 +12,7 @@ function HeaderApp() {
                 {/* Logo */}
                 <div className="flex items-center gap-2">
                     <img src="https://cdn-icons-png.flaticon.com/512/4776/4776023.png" alt="MyCompany" className="h-15 w-15" />
-                    <span className="text-xl font-bold">My Company</span>
+                    <span className="text-3xl font-bold">MangaKami</span>
                 </div>
 
                 {/* Menú del perfil del usuario */}
