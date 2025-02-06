@@ -8,10 +8,10 @@ function HeaderApp() {
 
 
     return (
-            <header className="flex items-center justify-between bg-indigo-700 p-4 text-white">
+            <header className="flex items-center justify-between bg-purple-700 p-4 text-white">
                 {/* Logo */}
                 <div className="flex items-center gap-2">
-                    <img src={logo} alt="MyCompany" className="h-10 w-10" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/4776/4776023.png" alt="MyCompany" className="h-15 w-15" />
                     <span className="text-xl font-bold">My Company</span>
                 </div>
 

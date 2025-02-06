@@ -16,6 +16,11 @@ export class manga {
         min: 0,
     })
     price: number;
+    
+    @Prop({
+        required: true
+    })
+    stock: number;
 
     @Prop({
         trim: true

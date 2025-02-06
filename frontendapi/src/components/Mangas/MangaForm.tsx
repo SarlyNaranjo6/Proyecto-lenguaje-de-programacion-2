@@ -3,12 +3,14 @@ import { createMangaRequest } from "../../api/apiMangas";
 
 function MangaForm() {
 
-    const [ manga, setManga ] = useState({
-        title:"",
+    const [manga, setManga] = useState({
+        title: '',
         price: 0,
-        description:"",
+        stock: 0,
+        description: '',
         status: false,
     });
+    
 
     const Change = (
         e:ChangeEvent<HTMLInputElement| HTMLTextAreaElement> 
@@ -40,6 +42,11 @@ function MangaForm() {
                 rounded-lg bg-zinc-800 block w-full my-2" 
                 placeholder="Price of Manga" onChange={Change}/>
 
+                <input type="number" name="stock" 
+                className="border-2 border-grey-700 p-2 
+                rounded-lg bg-zinc-800 block w-full my-2" 
+                placeholder="stock of Manga" onChange={Change}/>
+
                 <textarea name="description" rows={3} id="" 
                 className="border-2 border-grey-700 p-2 
                 rounded-lg bg-zinc-800 block w-full my-2" 
@@ -53,8 +60,12 @@ function MangaForm() {
                     <span>Executed</span>
                 </label>
 
-                <button className="bg-indigo-500 px-3 block py-2 w-full">Save</button>
-
+                <button 
+                    className="bg-indigo-500 hover:bg-indigo-700 px-3 block py-2 w-full"
+                    onClick={submitForm}
+                    >
+                        Save
+                </button>
             </form>
             </div>
 

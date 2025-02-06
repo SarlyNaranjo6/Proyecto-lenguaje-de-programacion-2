@@ -11,6 +11,10 @@ export class createMangaDto{
     @IsNotEmpty()
     price: number;
 
+    @IsNumber()
+    @IsNotEmpty()
+    stock: number;
+
     @IsString()
     @IsOptional()
     description?: string;

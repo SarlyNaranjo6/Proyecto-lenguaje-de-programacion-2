@@ -26,7 +26,7 @@ function FooterApp() {
               <div className="w-full h-64 bg-gray-800 rounded-lg overflow-hidden">
                
                 <img
-                  src="/img/MapaPio.JPG" // Imagen de ejemplo de mapa
+                  src="/img/image.jpg" // Imagen de ejemplo de mapa
                   alt="Ubicación de la compañía"
                   className="w-full h-full object-cover"
                 />

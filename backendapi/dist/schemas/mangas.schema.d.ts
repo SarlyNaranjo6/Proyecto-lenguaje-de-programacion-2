@@ -1,6 +1,7 @@
 export declare class manga {
     title: string;
     price: number;
+    stock: number;
     description: string;
     status: boolean;
 }

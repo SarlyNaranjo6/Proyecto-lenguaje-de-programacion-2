@@ -31,6 +31,12 @@ __decorate([
 ], manga.prototype, "price", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
+        required: true
+    }),
+    __metadata("design:type", Number)
+], manga.prototype, "stock", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
         trim: true
     }),
     __metadata("design:type", String)

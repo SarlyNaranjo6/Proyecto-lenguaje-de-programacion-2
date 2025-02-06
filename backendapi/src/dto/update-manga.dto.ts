@@ -9,6 +9,10 @@ export class updateMangaDto{
     @IsOptional()
     precio: number;
 
+    @IsNumber()
+    @IsOptional()
+    stock: number;
+
     @IsString()
     @IsOptional()
     description?: string;
