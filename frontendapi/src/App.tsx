@@ -6,28 +6,24 @@ import FooterApp from "./components/Layout/FooterApp";
 import NavbarApp from "./components/Layout/NavbarApp";
 import Contacto from "./components/Mangas/Contacto";
 import Bienvenida from "./pages/Bienvenida";
-import ilu from "./assets/images/ilustracion.jpg";
 
 function App() {
   return (
     <Router>
-      <HeaderApp />
-      <NavbarApp />
+      <HeaderApp/>
+      <NavbarApp/>
+      <main className="bg-zinc-800 h-screen text-white flex items-center justify-center">
 
-      <main 
-        className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
-        style={{ backgroundImage: `url(${ilu})` }}
-      >
-        <div className="relative z-10 w-full">
-          <Routes>
-            <Route path="/inicio" element={<Bienvenida />} />
-            <Route path="/productos" element={<Mangasindex />} />
-            <Route path="/productos/nuevo" element={<MangaForm />} />
-            <Route path="/contacto" element={<Contacto />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/inicio" element={<Bienvenida />} />
+          <Route path="/productos" element={<Mangasindex />} />
+          <Route path="/productos/nuevo" element={<MangaForm />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+
       </main>
-      <FooterApp />
+      <FooterApp/>
+      
     </Router>
   );
 }
